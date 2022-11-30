@@ -10,12 +10,12 @@ pipeline{
 	stages{
 		stage('Build'){
 			steps {
-				sh 'uname -a'
+				sh 'df -hk'
 			}
 		}
 		stage('Deploy'){
 			steps {
-				sh 'uname -a'
+				sh 'cat /etc/lsb-release'
 			}
 		}
 	}
