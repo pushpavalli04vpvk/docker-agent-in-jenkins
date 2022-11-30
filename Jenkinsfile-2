@@ -1,0 +1,22 @@
+pipeline{
+	agent {
+		docker {
+			image 'ubuntu:latest'
+		}	
+	}
+	option {
+		newContainerPerStage()
+	}
+	stages{
+		stage('Build'){
+			steps {
+				sh 'uname -a'
+			}
+		}
+		stage('Deploy'){
+			steps {
+				sh 'uname -a'
+			}
+		}
+	}
+}
